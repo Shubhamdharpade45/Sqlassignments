@@ -1,0 +1,81 @@
+show database;
+
+create database batch346;
+ 
+use batch346;
+
+create table student (stuiId int Primary Key auto_Increment , name varchar (50) not null, age , city varchar(50), mobail bigint );
+
+insert into student (name , age , city , mobail )values('shubham', 23,'PUNE', 9975818176),('Sham', 23,'Nashik', 99755687806),('shubham', 23,'PUNE', 9975818176),('Ram', 23,'Mumbai', 7821943990);
+
+
+select * from Student;
+
+
+update student set name ='Prathmesh' where studid =2;
+
+
+alter table student add column dob int ;
+
+alter table student modify column mobaail bigint NotNull;
+
+
+alter table student drop column age ;
+
+delete from student where id = 3;
+
+trunket table student ;
+
+select name student where age > 25 ();
+
+select name student where name ='Shubham';
+
+
+select age student where name = 'shubham' ;
+
+select name from student where age > select age student where name = 'shubham';
+
+select * from student where age >25 AND City in(pune, mumbai, nashik);
+
+select name from student where City in(pune, mumbai, nashik);
+
+select * from student where age between 25 AND 30 ; 
+
+select * from Student ORDER BY age ASC;
+
+select DISTINCT city from student;
+
+SELECT Name , City AS Address FROM Student; 
+
+SELECT * From Student WHERE Name like 'A%';
+
+
+
+
+gg
+
+
+
+
+
+
+
+
+
+
+create table department (deptId int primary key , deptName varchar(90), int deptsize );
+
+create table employee( empid int , name varchar(70), int age, city varchar(78) deptId int , Foreign key (deptid) REFRANCE deptmen(deptid));
+
+
+select e.empid,e.name,e.age,e.city, e.deptid,e.deptname,e.deptsize from employee left join ON employee.deptid=department.deptid;
+
+select e.empid,e.name,e.age,e.city, e.deptid,e.deptname,e.deptsize from employee inner join ON employee.deptid=department.deptid;
+
+select e.empid,e.name,e.age,e.city, e.deptid,e.deptname,e.deptsize from employee right join ON employee.deptid=department.deptid;
+
+select e.empid,e.name,e.age,e.city, e.deptid,e.deptname,e.deptsize from employee left join ON employee.deptid=department.deptid UNION select e.empid,e.name,e.age,e.city, e.deptid,e.deptname,e.deptsize from employee left join ON employee.deptid=department.deptid;
+
+
+
+
